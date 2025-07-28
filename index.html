@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <script defer src="script.js"></script>
+
+    <!-- //favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
   </head>
   <body>
     <main>
       <header class="header-title">
-        <p class="kalma">﷽</p>
+        <div class="kalma-container">
+          <p class="kalma">﷽</p>
+        </div>
         <div class="logo-container">
           <a
             href="#
@@ -73,30 +83,21 @@
       <div class="result-check-container">
         <header>
           <h2>آن لائن رزلٹ (نتائج)</h2>
-          <h3>انٹرمیڈیٹ (پارٹ-١ و پارٹ-٢) سالانہ (دوئم) امتحان 2024</h3>
+          <h3>میٹرک (نہم اور دہم) سالانہ (دوئم) امتحان 2025</h3>
         </header>
         <form action="#" autocomplete="off" class="form">
           <div class="input-container name-input-container">
-            <input
-              type="text"
-              id="name"
-              value="Amrullah"
-              class="name-input"
-              required
-            />
+            <input type="text" id="name" class="name-input" required />
             <label for="name">Name</label>
           </div>
           <div class="input-container roll-no-input-container">
-            <input
-              type="text"
-              id="roll-no"
-              class="roll-no-input"
-              value="955465"
-              required
-            />
+            <input type="text" id="roll-no" class="roll-no-input" required />
             <label for="roll-no">Roll No</label>
           </div>
-          <button type="submit">Check Result</button>
+          <button type="submit">
+            <span class="spinner hidden"></span>
+            <span class="result-text">Check Result</span>
+          </button>
         </form>
       </div>
       <div class="result-show-container">
@@ -104,6 +105,15 @@
           دیے گئے فارم کو بھرنے کے بعد بٹن پہ کلک کرنے سے رزلٹ (نتیجہ)اس خانے
           میں دیکھائی دے گا
         </h6>
+        <span class="spinner hidden"></span>
+        <!-- <div class="alert-warning">
+          <h2>Warning</h2>
+          <p>
+            No student record found. Please double check the particulars
+            entered.
+          </p>
+          <p>مزید معلومات کے لئے ویب ماسٹر مردان بورڈ سے رابطہ کریں</p>
+        </div> -->
         <!-- <header>
           <img
             src="images/logo.png"

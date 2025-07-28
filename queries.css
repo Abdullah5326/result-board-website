@@ -8,6 +8,10 @@
     justify-content: center;
   }
 
+  .kalma-container {
+    margin-top: 1.6rem;
+  }
+
   .result-show-container,
   .result-check-container {
     max-width: 50rem;

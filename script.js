@@ -19,31 +19,51 @@ const inputFullName = document.querySelector(".name-input");
 const inputRollNo = document.querySelector(".roll-no-input");
 const form = document.querySelector(".form");
 const containerShowResult = document.querySelector(".result-show-container");
+const spinner = document.querySelector(".spinner");
+const resultText = document.querySelector(".result-text");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  spinner.classList.remove("hidden");
+
   const studentName = inputFullName.value.toLowerCase();
   const studentRollNo = +inputRollNo.value;
-  console.log(studentName);
-  console.log(+inputRollNo.value);
-  if (
-    isNaN(studentRollNo) ||
-    (students.some((student) => +inputRollNo.value !== student.rollNo) &&
-      students.some((student) => studentName !== student.fullName))
-  ) {
-    containerShowResult.innerHTML = "";
+  const studentRollNoExist = students.some(
+    (student) => +inputRollNo.value === student.rollNo
+  );
 
-    console.log("Error");
+  const studentNameExist = students.some(
+    (student) => studentName === student.fullName
+  );
+
+  if (isNaN(studentRollNo) || !(studentRollNoExist && studentNameExist)) {
+    containerShowResult.innerHTML = ` <span class="spinner-2"></span> `;
+    resultText.textContent = "Checking...";
+    const html = ` <div class="alert-warning">
+                        <h2>Warning</h2>
+                        <p>
+                        No student record found. Please double check the particulars
+                        entered.
+                        </p>
+                        <p>مزید معلومات کے لئے ویب ماسٹر مردان بورڈ سے رابطہ کریں</p>
+                      </div>`;
+    setTimeout(() => {
+      spinner.classList.add("hidden");
+      containerShowResult.innerHTML = "";
+      resultText.textContent = "Check Result";
+
+      return containerShowResult.insertAdjacentHTML("afterbegin", html);
+    }, 1500);
   }
-  console.log();
-  conta;
-  if (studentName && studentRollNo) {
-    console.log(studentName);
+
+  if (studentNameExist && studentRollNoExist) {
+    containerShowResult.innerHTML = ` <span class="spinner-2"></span> `;
+    resultText.textContent = "Checking...";
+
     const student = students.find(
       (student) =>
         student.fullName === studentName && student.rollNo === studentRollNo
     );
-    console.log(student);
     const html = `   <header>
           <img
             src="images/logo.png"
@@ -73,7 +93,7 @@ form.addEventListener("submit", function (e) {
           </tr>
           <tr>
             <td>Name</td>
-            <td>${student.name} </td>
+            <td>${student.fullName} </td>
           </tr>
           <tr>
             <td>Father Name</td>
@@ -102,15 +122,17 @@ form.addEventListener("submit", function (e) {
     return setTimeout(function () {
       containerShowResult.innerHTML = "";
 
+      spinner.classList.add("hidden");
+      resultText.textContent = "Check Result";
       containerShowResult.insertAdjacentHTML("afterbegin", html);
-    }, 3000);
+    }, 1500);
   }
-  containerShowResult.innerHTML = "";
+  // containerShowResult.innerHTML = "";
 
-  const html = `<h6 class="message">
-          دیے گئے فارم کو بھرنے کے بعد بٹن پہ کلک کرنے سے رزلٹ (نتیجہ)اس خانے
-          میں دیکھائی دے گا
-        </h6>`;
-  return containerShowResult.insertAdjacentHTML("afterbegin", html);
-  console.log("below");
+  // const html = `<h6 class="message">
+  //         دیے گئے فارم کو بھرنے کے بعد بٹن پہ کلک کرنے سے رزلٹ (نتیجہ)اس خانے
+  //         میں دیکھائی دے گا
+  //       </h6>`;
+  // return containerShowResult.insertAdjacentHTML("afterbegin", html);
+  // console.log("below");
 });
