@@ -8,7 +8,15 @@ const students = [
     fullName: "amrullah",
     fatherName: "Said Shah",
     rollNo: 955465,
-    marks: "ph(F), Bio(F)",
+    marks: "Ph(F), Ch(F)",
+    group: "Science",
+    class: "9th",
+  },
+  {
+    fullName: "amrullah",
+    fatherName: "Said Shah",
+    rollNo: 956465,
+    marks: "474",
     group: "Science",
     class: "9th",
   },
@@ -31,7 +39,9 @@ form.addEventListener("submit", function (e) {
   const studentRollNoExist = students.some(
     (student) => +inputRollNo.value === student.rollNo
   );
-
+  inputFullName.value = inputRollNo.value = "";
+  inputFullName.blur();
+  inputRollNo.blur();
   const studentNameExist = students.some(
     (student) => studentName === student.fullName
   );
@@ -64,6 +74,8 @@ form.addEventListener("submit", function (e) {
       (student) =>
         student.fullName === studentName && student.rollNo === studentRollNo
     );
+    const fullName =
+      student.fullName.slice(0, 1).toUpperCase() + student.fullName.slice(1);
     const html = `   <header>
           <img
             src="images/logo.png"
@@ -93,7 +105,7 @@ form.addEventListener("submit", function (e) {
           </tr>
           <tr>
             <td>Name</td>
-            <td>${student.fullName} </td>
+            <td>${fullName} </td>
           </tr>
           <tr>
             <td>Father Name</td>
@@ -113,10 +125,7 @@ form.addEventListener("submit", function (e) {
           </tr>
         </table>
           <footer>
-          <span>Disclainer</span>: Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Temporibus corporis, sit voluptas sint deleniti
-          eaque qui aspernatur impedit id vero, alias numquam dolore. Possimus
-          error cum consectetur atque, ipsum rerum!
+          <span>Disclainer</span>: This result is issued provisionally, errors and omission expected a sa notice only.Any entry appearing on the website does not confer any right or privilege on a candidate for the grant of certificate which will be issued under the rules/regulations on the basis of the original record of the board.
         </footer>`;
 
     return setTimeout(function () {
