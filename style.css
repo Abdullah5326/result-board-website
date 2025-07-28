@@ -166,10 +166,10 @@ main {
 }
 
 .result-check-container h3 {
-  color: var(--white-colr);
   background-color: var(--green-color);
   font-size: 1.4rem;
   padding: 1.6rem;
+  color: #fff;
 }
 
 form {
@@ -185,7 +185,7 @@ input {
   background-color: transparent;
   height: 3.6rem;
   font-size: 2rem;
-  color: var(--white-colr);
+  color: #fff;
   padding: 0 1.2rem;
 }
 
@@ -220,7 +220,7 @@ button {
   font-size: 2.4rem;
   border: none;
   background-color: var(--green-color);
-  color: var(--white-colr);
+  color: #fff;
   transition: all 0.2s;
 }
 
@@ -231,9 +231,12 @@ button:hover {
 
 .result-show-container {
   border: 1px solid #eee;
-  height: 50vh;
+  /* height: 50vh; */
   border-radius: 0.5rem;
   margin-right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .message {
@@ -241,4 +244,98 @@ button:hover {
   margin-top: 2.4rem;
   color: #17a2b8;
   font-size: 1.6rem;
+}
+
+.result-show-container header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  justify-content: center;
+}
+
+.result-show-container header h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.result-show-container header h3 {
+  font-size: 1.6rem;
+  color: #17a2b8;
+  font-weight: 400;
+  text-align: center;
+}
+
+.student-information-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information {
+  display: flex;
+  /* gap: 1.6rem; */
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  align-items: center;
+  justify-content: center;
+  max-width: 30rem;
+}
+
+.information p:first-child {
+  background-color: var(--white-colr);
+  padding: 0.8rem 0;
+  background-color: aliceblue;
+  margin-right: 1.6rem;
+  /* justify-self: stretch; */
+}
+
+.information p {
+  padding: 0 2.4rem;
+  justify-self: start;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+
+td {
+  text-align: start;
+  /* border-top: 1px solid #000; */
+  border-top: 1px solid #ddd;
+}
+
+tr td:first-child {
+  background-color: rgba(238, 238, 238, 0.392);
+  padding: 0.6rem 0;
+  color: red;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.roll-no td:last-child {
+  font-size: 3.2rem;
+  padding: 0.6rem 0;
+  padding-left: 1.6rem;
+}
+
+tr td:last-child {
+  /* text-align: center; */
+  padding-left: 1.4rem;
+  /* background-color: red; */
+}
+
+footer span {
+  color: #17a2b8;
+  font-size: 1.6rem;
+}
+
+footer {
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+  text-align: center;
 }

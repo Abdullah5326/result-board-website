@@ -6,6 +6,7 @@
     <title>Online Result:::BISE Mardan</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <main>
@@ -15,7 +16,6 @@
           <a
             href="#
             "
-            target="_blank"
           >
             <img
               src="images/logo.png"
@@ -75,13 +75,25 @@
           <h2>آن لائن رزلٹ (نتائج)</h2>
           <h3>انٹرمیڈیٹ (پارٹ-١ و پارٹ-٢) سالانہ (دوئم) امتحان 2024</h3>
         </header>
-        <form action="#" autocomplete="off">
+        <form action="#" autocomplete="off" class="form">
           <div class="input-container name-input-container">
-            <input type="email" id="name" required />
+            <input
+              type="text"
+              id="name"
+              value="Amrullah"
+              class="name-input"
+              required
+            />
             <label for="name">Name</label>
           </div>
           <div class="input-container roll-no-input-container">
-            <input type="text" id="roll-no" required />
+            <input
+              type="text"
+              id="roll-no"
+              class="roll-no-input"
+              value="955465"
+              required
+            />
             <label for="roll-no">Roll No</label>
           </div>
           <button type="submit">Check Result</button>
@@ -89,9 +101,63 @@
       </div>
       <div class="result-show-container">
         <h6 class="message">
-          ...دیے گئے فارم کو بھرنے کے بعد بٹن پہ کلک کرنے سے رزلٹ (نتیجہ)اس خانے
+          دیے گئے فارم کو بھرنے کے بعد بٹن پہ کلک کرنے سے رزلٹ (نتیجہ)اس خانے
           میں دیکھائی دے گا
         </h6>
+        <!-- <header>
+          <img
+            src="images/logo.png"
+            alt="Mardan board logo"
+            class="logo"
+            height="90"
+            width="88"
+          />
+          <div>
+            <h2>Board of Intermediate & secondary education, mardan</h2>
+            <h3>Result card (SSC) annual examination 2025</h3>
+          </div>
+        </header>
+
+        <table>
+          <tr class="roll-no">
+            <td>Roll No</td>
+            <td>134728</td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td>9th</td>
+          </tr>
+          <tr>
+            <td>Group</td>
+            <td>Science</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>Amrullah</td>
+          </tr>
+          <tr>
+            <td>Father Name</td>
+            <td>Said Shah</td>
+          </tr>
+          <tr>
+            <td>Marks</td>
+            <td>550</td>
+          </tr>
+          <tr>
+            <td>Grades</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Remarks</td>
+            <td></td>
+          </tr>
+        </table> -->
+        <!-- <footer>
+          <span>Disclainer</span>: Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Temporibus corporis, sit voluptas sint deleniti
+          eaque qui aspernatur impedit id vero, alias numquam dolore. Possimus
+          error cum consectetur atque, ipsum rerum!
+        </footer> -->
       </div>
       <iframe
         src="https://www.youtube.com/embed/GKm-vXfaKvI?autoplay=1&playsinline=1&start=140&enablejsapi=1&origin=https%3A%2F%2Fresult.bisemdn.edu.pk&widgetid=1&forigin=https%3A%2F%2Fresult.bisemdn.edu.pk%2F&aoriginsup=1&gporigin=https%3A%2F%2Fweb.bisemdn.edu.pk%2F&vf=1"
