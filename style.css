@@ -65,11 +65,15 @@ main {
   position: absolute;
   left: 0;
   top: 0;
+  /* animation: ; */
 }
 
-@keyframes {
+@keyframes move {
   from {
-    left: ;
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }
 
