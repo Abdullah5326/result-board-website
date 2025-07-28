@@ -20,6 +20,14 @@ const students = [
     group: "Science",
     class: "9th",
   },
+  {
+    fullName: "mahaz ahmad",
+    fatherName: "Shahid Mohammad",
+    rollNo: 952469,
+    marks: "Ph(F), Ch(F)",
+    group: "Science",
+    class: "9th",
+  },
 ];
 
 const resultBtn = document.querySelector(".btn-result");
@@ -34,8 +42,9 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   spinner.classList.remove("hidden");
 
-  const studentName = inputFullName.value.toLowerCase();
+  const studentName = inputFullName.value.trim().toLowerCase();
   const studentRollNo = +inputRollNo.value;
+  console.log(studentName, studentRollNo);
   const studentRollNoExist = students.some(
     (student) => +inputRollNo.value === student.rollNo
   );
@@ -145,3 +154,6 @@ form.addEventListener("submit", function (e) {
   // return containerShowResult.insertAdjacentHTML("afterbegin", html);
   // console.log("below");
 });
+
+const text = "abdullah  ";
+console.log(text.trim().toUpperCase());
