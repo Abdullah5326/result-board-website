@@ -1,14 +1,17 @@
-const numbers = function (max, min) {
-  console.log((max - min) * Math.random() + min);
-  return min * Math.random();
-};
+const resultBtn = document.querySelector(".btn-result");
+const inputFullName = document.querySelector(".name-input");
+const inputRollNo = document.querySelector(".roll-no-input");
+const form = document.querySelector(".form");
+const containerShowResult = document.querySelector(".result-show-container");
+const spinner = document.querySelector(".spinner");
+const resultText = document.querySelector(".result-text");
 
 const students = [
   {
     fullName: "amrullah",
     fatherName: "Said Shah",
     rollNo: 955465,
-    marks: "Ph(F), Ch(F)",
+    marks: "480",
     group: "Science",
     class: "9th",
   },
@@ -24,19 +27,11 @@ const students = [
     fullName: "mahaz ahmad",
     fatherName: "Shahid Mohammad",
     rollNo: 952469,
-    marks: "Ph(F), Ch(F)",
+    marks: "475",
     group: "Science",
     class: "9th",
   },
 ];
-
-const resultBtn = document.querySelector(".btn-result");
-const inputFullName = document.querySelector(".name-input");
-const inputRollNo = document.querySelector(".roll-no-input");
-const form = document.querySelector(".form");
-const containerShowResult = document.querySelector(".result-show-container");
-const spinner = document.querySelector(".spinner");
-const resultText = document.querySelector(".result-text");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
